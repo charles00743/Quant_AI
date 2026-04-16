@@ -182,34 +182,35 @@ It also includes stress-period analysis for market events such as:
 This helps evaluate not only return performance, but also resilience under adverse conditions.
 
 ---
-
 ## Suggested Project Structure
 
 ml-finance-regime-strategy/
 ├─ README.md
-├─ data/processed/
-│  │ 
-│  ├─ regime_features_with_labels.csv
-│  ├─ regime_features_with_labels_synth_enhanced.csv
-│  ├─ all_regimes_synthetic_features.csv
-│  ├─ djia_weekly_factors_V2.csv
-│  └─ djia_weekly_factors.csv
+├─ data/
+│  └─ processed/
+│     ├─ regime_features_with_labels.csv
+│     ├─ regime_features_with_labels_synth_enhanced.csv
+│     ├─ all_regimes_synthetic_features.csv
+│     ├─ djia_weekly_factors.csv
+│     └─ djia_weekly_factors_v2.csv
 ├─ src/
 │  ├─ data/
 │  │  ├─ download_dow_data.py
 │  │  ├─ analyze_dow_data.py
 │  │  └─ generate_regime_data.py
 │  ├─ regime/
-│  │  ├─ stock_analyzer.py
+│  │  └─ stock_analyzer.py
 │  ├─ factors/
 │  │  ├─ factor_calculator.py
 │  │  └─ factor_analyzer.py
-│  ├─ backtest/
-│  │  ├─ backtester.py
-│  │  ├─ backtester_synth_regime.py
-│  │  └─ plot_comparison_capital_curves.py
-├─ outputs/backtests/
-│  
+│  └─ backtest/
+│     ├─ backtester.py
+│     ├─ backtester_synth_regime.py
+│     └─ plot_comparison_capital_curves.py
+├─ outputs/
+│  └─ backtests/
+│     ├─ capital_curve_V4_original_regime.csv
+│     └─ capital_curve_V6_synth_enhanced.csv
 ├─ reports/
 │  └─ report.pdf
 └─ tests/
